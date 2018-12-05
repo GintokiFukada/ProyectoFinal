@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu Simple con HTML Y CSS</title>
+	<link rel="stylesheet" href="estilos.css">
+    	<style>
+		body {margin-left: 100px; margin-right: 100px; text-align:justify;}
+        
+		div.otro {
+		background-color:#5D6D7E  ;
+		color: white;
+            margin: 30px 0 20px 0;
+		padding: 20px;
+		} 
+        
+	
+        
+        
+        
+	</style background-color: white;
+        color:#5D6D7E  ;
+        }>
+	
+
+
+	
+</head>
+<body>
+	<header>
+		
+	</header>
+<body>
+            
+      <main  class="main">
+	<div class="otro">
+	<h2>Configurar la Red Anfitrion</h2>
+            <p></p></div><br/>
+    Esto en caso de no haber hecho bien la maquina virtual
+    1. Para configurar la red anfitriona, tenemos que ir a las herramientas globales de VirtalBox<br/><br/>
+    2. Crear otra tarjeta de red<br/><br/>
+    3. Una vez creada, seleccionaras la maquina virtual que usaras,y daras clic en configuraciones<br/><br/>
+    4. Despues,daras clic en Network, iras en adapter 2 usaras la opcion de : Host-only adapter<br/><br/>
+    5. En name, pondras el nombre de la targeta de red que creaste<br/><br/>
+    6. Y en premiscuous mode: seleccionaras la opcion de Allow all<br/><br/>
+    7. Una vez terminado esto, reiniciaras la maquina<br/><br/>
+    8. Escribiras:<a style="color:#3348FF;">ifconfig -a</a> esto es para ver todas las targetas de red disponibles<br/><br/>   
+    9. Luego teclearas esta direccion:<a style="color:#3348FF;"> /etc/netplan/50-cloud-init.yaml</a> y agragaras la segunda targeta de red<br/><br/>
+    10. Vuelve a reiniciar la maquina<br/><br/>          
+ 
+            
+<main  class="main">
+	<div class="otro">
+	<h2>Descargas</h2>
+	<p></p></div><br/>
+    </main>
+    <h4><a style="color:cadetblue;">Instalacion de paquetes</a></h4><br/>
+    1. La siguiente instruccion <a style="color:#3348FF;">( sudo update )</a> sirve para identificar lo que ya estan instalados y lo que se debe actualizar en el ubuntu.<br/><br/>
+    2. La siguiente instruccion <a style="color:#3348FF;">( sudo upgrate )</a> como lo dice el codigo sirve para actualizar cualquier paquete. Te pedira oprima la tecla <a style="color:#3348FF;">( s )</a> para confirmar la actualización.<br/><br/><br/>
+    
+    
+    <h4><a style="color:cadetblue;">MYSQL</a></h4><br/>
+    1. Obligatoriamente tiene que estar conectado el dispositivo a internet. <a style="color:#3348FF;">( apt search mysql )</a> aparecera un listado de todas las apliacaciones que tiene instaladas.<br/><br/>
+    2. Segundo paso <a style="color:#3348FF;">(sudo apt install mysql-server )</a> y oprime la tecla enter para que comieze la descarga.<br/><br/>
+    3. De la instruccion <a style="color:#3348FF;">( s )</a> para afirmar la descarga.<br/><br/><br/>
+    
+
+    <h4><a style="color:cadetblue;">Apache</a></h4><br/>
+    1. Tecleara el siguiente codigo <a style="color:#3348FF;">( apt search apache )</a> aparecera un listado de todas las apliacaciones que tiene instaladas.<br/><br/>
+    2. Ya terminado el primer paso dara la instruccion <a style="color:#3348FF;">(sudo apt install apache2)</a> para que comieze la descarga.<br/><br/>
+    3. Dara la instruccion <a style="color:#3348FF;">( s )</a> para afirmar la descarga.<br/><br/>
+    4. En este paso aprendera a identificar si esta funcionando apache <a style="color:#3348FF;">( service --status-all | grep apache2 )</a> si aparece un <a style="color:#3348FF;">[+]</a>es que esta corriendo apache y si aparece <a style="color:#3348FF;">[-]</a>es que no esta corriendo.<br/>
+
+    <h4><a style="color:cadetblue;">PHP</a></h4><br/>
+        1. Repetira el mismo procedimiento <a style="color:#3348FF;">( apt search php )</a> aparecera un listado de todas las apliacaciones que tiene instaladas.<br/><br/>
+        2. Ya terminado el primer paso dara la instruccion <a style="color:#3348FF;">(sudo apt install php)</a> para que comieze la descarga.<br/><br/>
+        3. Dara la instruccion <a style="color:#3348FF;">( s )</a> para afirmar la peticion y comieze la descarga.</p><br/><br/><br/>
+    
+    
+    <div class="otro"><h2>Clonacción del repocitorio.</h2></div><br/>
+    1. Este sera el lugar donde tiene que quedar guardado el codigo <a style="color:#3348FF;">( cd/var/www/html )</a> y de enter para ejecutar cualquier instrucción.<br/><br/>
+    2. Tecleara el siguiente codigo y la URL que aparece acontinuacion <a style="color:#3348FF;">(sudo git clone https://github.com/dgeti-cetis108/programacion-M4s2-2018.git)</a> esto sirve para clonar el repositorio y obligatoriamente tiene que estar conectado a internet.<br/><br/>
+    3. Despues la instrucion <a style="color:#3348FF;">( ls )</a>, esto sirve para todo el listado de archivos.<br/><br/>
+    4. Cambiara el nombre del archivo que descargo de la URL, tecleando el siguiente codigo <a style="color:#3348FF;">( sudo mv Programacion-M4s2-2018/ library.com )</a>.<br/><br/>
+    5. Despues la instrucion <a style="color:#3348FF;">( ls )</a>.<br/>
+    
+   
+        
+    </main>
+      <main  class="main">
+	<div class="otro">
+	<h2>Activacion de servicios:</h2>
+	<p></p></div><br/>
+    </main>
+    Para activar los servivios de apache y mysql, tienes que escribir las siguientes instrucciones:<br/><br/> 
+    <a style="color:#3348FF;">sudo server apache2 start</a><br/><br/> 
+    <a style="color:#3348FF;">sudo server mysql start</a><br/><br/>
+    <main  class="main">
+	<div class="otro">
+	<h2>Creacion usuario MySQL</h2>
+	<p></p></div><br/>
+    </main>
+    Para poder crar el usuario tenemos que estar en modo de administrador o root <br/><br/>
+    1. Para esto tienes que escribir la siguiente instruccio  <a style="color:#3348FF;">sudo -i</a><br/><br/>
+    2. Despues escribe:<a style="color:#3348FF;">mysql</a> esto para entrar en MySQL<br/><br/>
+    3. Luego escribe la siguiente instruccion<a style="color:#3348FF;">create user 'nombre del usuario'@'localhost' odentified by'la contraseña'</a><br/><br/>
+    4. Escribe <a style="color:#3348FF;">exit</a> para salir de MySQL<br/><br/>
+    5. Escribe <a style="color:#3348FF;">exit</a> otra vez para salir de usuario root<br/><br/>
+    <main  class="main">
+	<div class="otro">
+	<h2>Modificar usuario y contraseña:</h2>
+	<p></p></div><br/>
+    </main>
+    1. Escriba el comando <a style="color:#3348FF;">sudo nano/var/www/html/livrary.com/classes/conexion.php</a> y da enter<br/><br/>
+    2. En la parte de username, escribe el nombre del usuario que creaste y la contraseña<br/><br/>
+    3. Oprima <a style="color:#3348FF;">control + o</a> para guardar los cambios<br/><br/>
+    4. Y despues oprime <a style="color:#3348FF;">control + x</a> para salir<br/><br/>
+    
+    <div class="otro"><h2>Configuracion de Virtual Host.</h2></div><br/>
+    <p></p></div><br/>
+    </main>
+    1. Ingrese a la carpeta <a style="color:#3348FF;">/etc/apache2/sties-available</a> y una vez ahi, escribe <a style="color:#3348FF;">sudo nanolibrary.com.conf</a><br/><br/>
+        
+    2. Escribe en el archivo el siguiente codigo<br/><br/>
+    <a style="color:#3348FF;">VirtualHost*:80></a><br/><br/>
+    <a style="color:#3348FF;">Server Name librery.com</a><br/><br/>
+        <a style="color:#3348FF;">Server Alias www.library.com</a><br/><br/>
+        <a style="color:#3348FF;">DocumentRoot /var/log/library.com-error.logCustomLog</a><br/><br/>
+        <a style="color:#3348FF;">DocumentRoot /var/log/library.com-error.logcommon</a><br/><br/>
+        <a style="color:#3348FF;">Server Name/VirtualHost</a><br/><br/>
+        
+    3. Cuando termine eso escribe <a style="color:#3348FF;">ls</a><br/><br/>
+    4. En la carpeta <a style="color:#3348FF;">sites-available</a> y escribe <a style="color:#3348FF;">sudo a2ensitelibrary.com</a>esto sirve para habilitar el dominio. Y reinicia el apache <a style="color:#3348FF;"> sudo service apache restart</a><br/><br/>
+    5. Entra a la carpeta <a style="color:#3348FF;">/etc/hosts</a> y agregue el siguiente codigo<br/><br/>
+        <a style="color:#3348FF;">127.0.0.1 library.com</a><br/><br/>
+        <a style="color:#3348FF;">127.0.0.1 www.library.com</a><br/><br/>
+    6. Guarda los cambios hechoscon el comando<a style="color:#3348FF;">control + o</a><br/><br/>
+    7. Ya fuera deubuntu entra a la carpeta<a style="color:#3348FF;">/etc/hosts</a> y agrgue lo siguiente:<br/><br/>
+    <a style="color:#3348FF;">192.168.56.101 library.com</a><br/><br/>
+    <a style="color:#3348FF;">192.168.56.101 www.library.com</a><br/><br/>
+            </body>
+</html>
